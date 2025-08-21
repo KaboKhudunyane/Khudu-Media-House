@@ -1,12 +1,139 @@
-# React + Vite
+# Khudu Media House - React Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive React application built with Vite, featuring professional media services portfolio with PWA capabilities.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ Built with Vite for fast development and optimized builds
+- 🎨 Modern React 19 with Hooks and functional components
+- 📱 Responsive design with Tailwind CSS
+- 🚀 PWA (Progressive Web App) support
+- 🔍 SEO optimized with React Helmet Async
+- 🎬 Framer Motion animations
+- 📧 Contact form functionality
+- 🖼️ Portfolio gallery with masonry layout
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React 19, Vite
+- **Styling**: Tailwind CSS, Custom CSS
+- **Animations**: Framer Motion
+- **Routing**: React Router DOM
+- **SEO**: React Helmet Async
+- **Icons**: React Icons
+- **Build Tool**: Vite with optimized configuration
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone <your-repo-url>
+cd khudu-media-house
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Start development server
+
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+The build output will be in the `dist/` directory.
+
+## Netlify Deployment
+
+This project is configured for easy deployment on Netlify.
+
+### Deployment Options:
+
+#### Option 1: Git-based Deployment (Recommended)
+
+1. Connect your GitHub/GitLab repository to Netlify
+2. Netlify will automatically detect the build settings from `netlify.toml`
+3. Deployments will trigger automatically on git push
+
+#### Option 2: Manual Deployment
+
+1. Build the project: `npm run build`
+2. Drag and drop the `dist/` folder to Netlify
+3. Configure redirects in Netlify dashboard if needed
+
+#### Option 3: Netlify CLI
+
+1. Install Netlify CLI: `npm install -g netlify-cli`
+2. Login: `netlify login`
+3. Deploy: `netlify deploy --prod --dir=dist`
+
+### Netlify Configuration
+
+- **Build Command**: `npm run build`
+- **Publish Directory**: `dist`
+- **Node Version**: 18
+- **SPA Routing**: Configured via `netlify.toml`
+
+## Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Page components
+├── assets/        # Images and media files
+├── styles/        # Global styles
+└── main.jsx       # Application entry point
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Environment Variables
+
+Create a `.env` file for environment-specific variables:
+
+```env
+VITE_APP_TITLE=Khudu Media House
+VITE_APP_DESCRIPTION=Professional media services portfolio
+```
+
+## Performance Features
+
+- Code splitting with manual chunks
+- Gzip and Brotli compression
+- Image optimization
+- Cache optimization headers
+- PWA offline capabilities
+
+## Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## License
+
+This project is proprietary property of Khudu Media House.
