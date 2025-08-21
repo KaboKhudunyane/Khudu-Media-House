@@ -1,0 +1,94 @@
+.services-section {
+    background-color: #fff;
+    color: #111;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.services-section h2 {
+    font-size: clamp(1.8rem, 4vw, 42px);
+    font-weight: bold;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.services-section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #f59e0b;
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
+}
+
+.services-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.services-track {
+    display: flex;
+    gap: 2rem;
+    animation: slide 30s linear infinite;
+    /* Adjust duration to control speed */
+}
+
+.service-card {
+    background-color: #f9fafb;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(100% / 3 - 1rem);
+    /* Desktop default */
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #374151;
+}
+
+/* Continuous scroll keyframes */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* Half because items are duplicated */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+    .service-card {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 767px) {
+    .service-card {
+        flex: 0 0 100%;
+    }
+}

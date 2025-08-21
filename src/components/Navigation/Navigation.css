@@ -1,0 +1,137 @@
+.navigation {
+    background-color: #111;
+    /* black */
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a,
+.nav-scroll-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #e5e7eb;
+    transition: color 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.nav-links a:hover,
+.nav-scroll-link:hover {
+    color: #f59e0b;
+    /* amber */
+}
+
+.nav-links a.active {
+    color: #f59e0b;
+    font-weight: 600;
+}
+
+.nav-cta {
+    background-color: #f59e0b;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    color: white !important;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.nav-cta:hover {
+    background-color: #d97706;
+    transform: scale(1.05);
+}
+
+/* Scroll link styles */
+.nav-scroll-link {
+    color: #e5e7eb;
+    transition: color 0.3s;
+}
+
+.nav-scroll-link:hover {
+    color: #f59e0b;
+}
+
+/* Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu li {
+    list-style: none;
+    /* extra safety */
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    padding: 2rem 2rem;
+    gap: 1.5rem;
+}
+
+.mobile-menu a,
+.mobile-menu .nav-scroll-link {
+    text-decoration: none;
+    color: #e5e7eb;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.mobile-menu a:hover,
+.mobile-menu .nav-scroll-link:hover {
+    color: #f59e0b;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}

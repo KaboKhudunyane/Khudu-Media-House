@@ -1,0 +1,144 @@
+.portfolio-section {
+    background: #fff;
+    color: #111;
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    font-size: clamp(1.8rem, 4vw, 42px);
+    font-weight: bold;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.portfolio-section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #f59e0b;
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-card {
+    background: #f9fafb;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    padding: 1rem;
+    text-align: left;
+}
+
+.portfolio-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #111;
+}
+
+.portfolio-info p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Lightbox overlay */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 900px;
+    width: 95%;
+    text-align: center;
+}
+
+.lightbox img {
+    max-height: 70vh;
+    width: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.lightbox-text {
+    color: #fff;
+    padding: 0 1rem;
+}
+
+.lightbox-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.lightbox-text p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Buttons */
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: -10px;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(245, 158, 11, 0.9);
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-btn.left {
+    left: -50px;
+}
+
+.nav-btn.right {
+    right: -50px;
+}
+
+@media (max-width: 768px) {
+    .nav-btn.left {
+        left: 10px;
+    }
+
+    .nav-btn.right {
+        right: 10px;
+    }
+}
