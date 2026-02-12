@@ -18,16 +18,16 @@ export default function Footer() {
         <a href="https://www.facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
           <FaFacebookF />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+        <a href="https://www.instagram.com/khudu.media.house" target="_blank" rel="noreferrer" aria-label="Instagram">
           <FaInstagram />
         </a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/karabo-khudunyane-5374971aa/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
           <FaLinkedinIn />
         </a>
         <a href="https://www.tiktok.com" target="_blank" rel="noreferrer" aria-label="TikTok">
           <FaTiktok />
         </a>
-        <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+        <a href="https://wa.me/+27797403500" target="_blank" rel="noreferrer" aria-label="WhatsApp">
           <FaWhatsapp />
         </a>
       </div>
