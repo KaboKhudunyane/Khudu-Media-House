@@ -1,139 +1,45 @@
-# Khudu Media House - React Portfolio Website
+# Khudu Media House
 
-A modern, responsive React application built with Vite, featuring professional media services portfolio with PWA capabilities.
+A responsive portfolio and business website for Khudu Media House, presenting its photography, videography, event coverage, wedding, podcast and aerial media offerings.
 
-## Features
+## Stack
 
-- ⚡ Built with Vite for fast development and optimized builds
-- 🎨 Modern React 19 with Hooks and functional components
-- 📱 Responsive design with Tailwind CSS
-- 🚀 PWA (Progressive Web App) support
-- 🔍 SEO optimized with React Helmet Async
-- 🎬 Framer Motion animations
-- 📧 Contact form functionality
-- 🖼️ Portfolio gallery with masonry layout
+- React 18, React Router and Vite
+- CSS, with locally stored photography and service imagery
+- Netlify static hosting and form-compatible deployment configuration
 
-## Tech Stack
+## Requirements
 
-- **Frontend**: React 19, Vite
-- **Styling**: Tailwind CSS, Custom CSS
-- **Animations**: Framer Motion
-- **Routing**: React Router DOM
-- **SEO**: React Helmet Async
-- **Icons**: React Icons
-- **Build Tool**: Vite with optimized configuration
+Use Node.js 22 (see `.nvmrc`) and npm.
 
-## Getting Started
+## Run locally
 
-### Prerequisites
-
-- Node.js 18+
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-
-```bash
-git clone <your-repo-url>
-cd khudu-media-house
-```
-
-2. Install dependencies
-
-```bash
-npm install
-```
-
-3. Start development server
-
-```bash
+```sh
+npm ci
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+Vite prints the local development URL after startup.
 
-### Building for Production
+## Checks and production build
 
-```bash
+```sh
+npm run lint
 npm run build
+npm run preview
 ```
 
-The build output will be in the `dist/` directory.
+The production site is written to `dist/`. There is no backend or environment variable required for the static site build. The contact form still needs to be configured with a real submission destination before it can receive messages; do not treat a client-side message as delivery.
 
-## Netlify Deployment
+## Deploy to Netlify
 
-This project is configured for easy deployment on Netlify.
+Connect this Git repository to Netlify. `netlify.toml` specifies `npm run build`, publishes `dist/`, selects Node 22 and instructs npm to install development dependencies needed for Vite even when Netlify sets `NODE_ENV=production`. The SPA fallback supports direct page routes.
 
-### Deployment Options:
+No deployment has been run from this repository session. After connecting the repo, trigger a deploy and confirm the build log reaches the publish stage.
 
-#### Option 1: Git-based Deployment (Recommended)
+## Structure
 
-1. Connect your GitHub/GitLab repository to Netlify
-2. Netlify will automatically detect the build settings from `netlify.toml`
-3. Deployments will trigger automatically on git push
-
-#### Option 2: Manual Deployment
-
-1. Build the project: `npm run build`
-2. Drag and drop the `dist/` folder to Netlify
-3. Configure redirects in Netlify dashboard if needed
-
-#### Option 3: Netlify CLI
-
-1. Install Netlify CLI: `npm install -g netlify-cli`
-2. Login: `netlify login`
-3. Deploy: `netlify deploy --prod --dir=dist`
-
-### Netlify Configuration
-
-- **Build Command**: `npm run build`
-- **Publish Directory**: `dist`
-- **Node Version**: 18
-- **SPA Routing**: Configured via `netlify.toml`
-
-## Project Structure
-
-```
-src/
-├── components/     # Reusable UI components
-├── pages/         # Page components
-├── assets/        # Images and media files
-├── styles/        # Global styles
-└── main.jsx       # Application entry point
-```
-
-## Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-
-## Environment Variables
-
-Create a `.env` file for environment-specific variables:
-
-```env
-VITE_APP_TITLE=Khudu Media House
-VITE_APP_DESCRIPTION=Professional media services portfolio
-```
-
-## Performance Features
-
-- Code splitting with manual chunks
-- Gzip and Brotli compression
-- Image optimization
-- Cache optimization headers
-- PWA offline capabilities
-
-## Browser Support
-
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-## License
-
-This project is proprietary property of Khudu Media House.
+- `src/pages/`: home, portfolio and contact route pages
+- `src/components/`: navigation, hero, services, portfolio and shared page sections
+- `src/assets/`: the site's owned project and service images
+- `public/`: static deployment assets and redirects
